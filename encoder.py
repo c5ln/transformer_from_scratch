@@ -4,6 +4,7 @@
 from multi_head import multi_head
 from norm import layer_norm
 from FFN import feed_forward_network
+
 def encoder_layer(x, attention_weights, W_O, n_heads, ffn_W, ffn_b, gamma1, beta1, gamma2, beta2):
 
     # attention    
