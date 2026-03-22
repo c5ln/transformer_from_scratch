@@ -12,8 +12,15 @@ from norm import layer_norm
 from FFN import feed_forward_network
 from cross_attention import cross_attention
 
-def decoder_layer(x, encoder_out, attention_w1,attention_w2, W_O1, W_O2, n_heads, ffn_W, ffn_b, gamma1, beta1, gamma2, beta2, gamma3, beta3):
-
+def decoder_layer(x, encoder_out, attention_w1,attention_w2, W_O1, W_O2, n_heads, ffn_W, ffn_b, gamma,beta):
+    
+    gamma1 = gamma[0]
+    beta1 = beta[0]
+    gamma2 = gamma[1]
+    beta2 = beta[1]
+    gamma3 = gamma[2]
+    beta3 = beta[2]
+    
     # masked self-attention    
     seq_len = x.shape[0]
     mask = np.triu(np.full((seq_len,seq_len), -np.inf), k=1)

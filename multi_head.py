@@ -13,7 +13,7 @@ def multi_head(X, W, W_O, n, mask=None):
     
     concat_res = concat(scaled_res, n)
     
-    return concat_res @ W_O
+    return concat_res @ W_O # linear
     
 
 def concat(scaled_res,n):
