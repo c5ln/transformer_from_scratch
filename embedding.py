@@ -15,6 +15,6 @@ def embedding(token_indices,embedding_matrix, d_model):
     output = token_vectors * sqrt(d_model)
     
     # positional encoding
-    output = output + positional_encoding(seq_len, d_model))
+    output = output + positional_encoding(seq_len, d_model)
     
     return output

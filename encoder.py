@@ -17,6 +17,6 @@ def encoder_layer(x, attention_weights, W_O, n_heads, ffn_W, ffn_b, gamma1, beta
     ffn_out = feed_forward_network(x2, ffn_W,ffn_b)
     
     # add + norm
-    x3 = layer_norm(x+ffn_out,gamma2,beta2)
+    x3 = layer_norm(x2+ffn_out,gamma2,beta2)
     
     return x3
