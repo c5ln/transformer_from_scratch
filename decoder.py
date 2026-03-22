@@ -1,13 +1,10 @@
-# [Decoder Layer] × N        ← 구현 필요
-#   ├─ Masked Self-Attention  (causal mask)
-#   ├─ Add & Norm
-#   ├─ Cross-Attention        (Q: decoder, K/V: encoder output)
-#   ├─ Add & Norm
-#   ├─ Feed Forward Network
-#   └─ Add & Norm
-
-
-# tokens -> embedding -> positional encoding -> encoder_layer 
+# [Decoder Layer] × N   
+#    Masked Self-Attention  (causal mask)
+#    Add & Norm
+#    Cross-Attention        (Q: decoder, K/V: encoder output)
+#    Add & Norm
+#    Feed Forward Network
+#    Add & Norm
 
 import numpy as np
 from multi_head import multi_head
