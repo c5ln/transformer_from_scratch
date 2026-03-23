@@ -18,6 +18,11 @@ def transformer(token_indices,voca_size,encoding_attention_weights,decoding_atte
     for i in range (stack_n):
         dec_out = decoder_layer(dec_out,enc_out,decoding_attention_weights[i][0], decoding_attention_weights[i][1], decoding_W_O[i][0], decoding_W_O[i][1], n_heads,ffn_w[1][i],ffn_b[1][i],gamma,beta)
 
-    output = dec_out @ W_out
+    output = dec_out @ W_out                                                                                                                                                                                                                                                                                          
     result = softmax(output)
+    
+    print("output shape:", result.shape)          # (seq_len, voca_size) 이어야 함
+    print("각 토큰의 확률 합:", result.sum(axis=-1))  # 모두 1.0에 가까워야 함                                                                                                                                                          
+    print("확률 범위:", result.min(), result.max()) # 0~1 사이여야 함                                                                                                                                                                   
+                
     return result
