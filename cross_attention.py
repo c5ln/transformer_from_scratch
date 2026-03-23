@@ -13,7 +13,7 @@ def cross_attention(Q,K,V,W,W_O,n):
         
         scaled_res.append(sd.scaled_dot_product(Q_proj, K_proj, V_proj))
     
-    concat_res = concat(scaled_res, n)
+    concat_res = concat(scaled_res)
     return concat_res @ W_O
     
 

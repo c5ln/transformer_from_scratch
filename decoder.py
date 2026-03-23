@@ -14,12 +14,12 @@ from cross_attention import cross_attention
 
 def decoder_layer(x, encoder_out, attention_w1,attention_w2, W_O1, W_O2, n_heads, ffn_W, ffn_b, gamma,beta):
     
-    gamma1 = gamma[0]
-    beta1 = beta[0]
-    gamma2 = gamma[1]
-    beta2 = beta[1]
-    gamma3 = gamma[2]
-    beta3 = beta[2]
+    gamma1 = gamma[2]
+    beta1 = beta[2]
+    gamma2 = gamma[3]
+    beta2 = beta[3]
+    gamma3 = gamma[4]
+    beta3 = beta[4]
     
     # masked self-attention    
     seq_len = x.shape[0]
