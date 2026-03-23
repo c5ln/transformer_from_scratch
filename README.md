@@ -1,2 +1,2 @@
 # transformer_from_scratch
-I want to implement a Transformer from scratch in Python to learn how it works.
+This project is a from-scratch Python implementation of the foundational Transformer architecture described in the "Attention Is All You Need" paper, designed to build a deep understanding of self-attention mechanisms without relying on high-level machine learning frameworks.
